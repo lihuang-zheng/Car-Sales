@@ -5,5 +5,20 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
+// import redux store, provider dependency
+import { createStore } from "redux"
+import { Provider } from "react-redux"
+
+// import root reducer
+import { rootReducer } from "./reducers"
+
+// create store and passing the rootReducer 
+// and provide the store to the app.
+const store = createStore(rootReducer)
+
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    rootElement);
