@@ -14,7 +14,10 @@ import { rootReducer } from "./reducers"
 
 // create store and passing the rootReducer 
 // and provide the store to the app.
-const store = createStore(rootReducer)
+const store = createStore(
+    rootReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
