@@ -12,7 +12,7 @@ import { connect } from "react-redux"
 // import actions
 import { removeFeature, buyItem } from "./actions/index"
 
-const App = () => {
+const App = (props) => {
 
   const removeFeature = item => {
     // dispatch an action here to remove an item

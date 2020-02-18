@@ -17,7 +17,7 @@ export const initialState = {
     ]
 }
 
-export const appReducer = (state = initialState, action) => {
+export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case REMOVE_FEATURE:
             return {
@@ -37,7 +37,7 @@ export const appReducer = (state = initialState, action) => {
                     price: state.car.price,
                     name: state.car.name,
                     image: state.car.image,
-                    feature: [...state.car.features, action.payload]
+                    features: [...state.car.features, action.payload]
                 }
             }
 
